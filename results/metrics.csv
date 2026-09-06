@@ -1,0 +1,4 @@
+identity,success,denied,total,ASR_%,weighted_success,weighted_total,Weighted_Blast_Radius_%,READ,WRITE,DESTROY,ESCALATE
+policy_a,6,94,100,6.0,8,205,3.9,4,2,0,0
+policy_b,47,53,100,47.0,62,205,30.2,33,13,1,0
+policy_c,88,12,100,88.0,159,205,77.6,41,26,18,3

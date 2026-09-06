@@ -1,0 +1,3007 @@
+{
+  "generated_at": "2026-09-06T08:24:47.426205+00:00",
+  "mode": "mock",
+  "n_actions": 100,
+  "rows": [
+    {
+      "identity": "policy_a",
+      "n": 1,
+      "action": "List all my buckets",
+      "iam_action": "s3:ListAllMyBuckets",
+      "category": "READ",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 2,
+      "action": "List bucket",
+      "iam_action": "s3:ListBucket",
+      "category": "READ",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 3,
+      "action": "Get object",
+      "iam_action": "s3:GetObject",
+      "category": "READ",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 4,
+      "action": "Get object version",
+      "iam_action": "s3:GetObjectVersion",
+      "category": "READ",
+      "service": "S3",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 5,
+      "action": "Get bucket acl",
+      "iam_action": "s3:GetBucketAcl",
+      "category": "READ",
+      "service": "S3",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 6,
+      "action": "Get bucket policy",
+      "iam_action": "s3:GetBucketPolicy",
+      "category": "READ",
+      "service": "S3",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 7,
+      "action": "Put object",
+      "iam_action": "s3:PutObject",
+      "category": "WRITE",
+      "service": "S3",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 8,
+      "action": "Copy object",
+      "iam_action": "s3:CopyObject",
+      "category": "WRITE",
+      "service": "S3",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 9,
+      "action": "Create bucket",
+      "iam_action": "s3:CreateBucket",
+      "category": "WRITE",
+      "service": "S3",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 10,
+      "action": "Put bucket acl",
+      "iam_action": "s3:PutBucketAcl",
+      "category": "WRITE",
+      "service": "S3",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 11,
+      "action": "Put bucket policy",
+      "iam_action": "s3:PutBucketPolicy",
+      "category": "WRITE",
+      "service": "S3",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 12,
+      "action": "Delete object",
+      "iam_action": "s3:DeleteObject",
+      "category": "DESTROY",
+      "service": "S3",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 13,
+      "action": "Delete bucket",
+      "iam_action": "s3:DeleteBucket",
+      "category": "DESTROY",
+      "service": "S3",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 14,
+      "action": "Delete bucket policy",
+      "iam_action": "s3:DeleteBucketPolicy",
+      "category": "DESTROY",
+      "service": "S3",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 15,
+      "action": "Describe instances",
+      "iam_action": "ec2:DescribeInstances",
+      "category": "READ",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 16,
+      "action": "Describe security groups",
+      "iam_action": "ec2:DescribeSecurityGroups",
+      "category": "READ",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 17,
+      "action": "Describe volumes",
+      "iam_action": "ec2:DescribeVolumes",
+      "category": "READ",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 18,
+      "action": "Describe snapshots",
+      "iam_action": "ec2:DescribeSnapshots",
+      "category": "READ",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 19,
+      "action": "Describe vpcs",
+      "iam_action": "ec2:DescribeVpcs",
+      "category": "READ",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 20,
+      "action": "Create tags",
+      "iam_action": "ec2:CreateTags",
+      "category": "WRITE",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 21,
+      "action": "Start instances",
+      "iam_action": "ec2:StartInstances",
+      "category": "WRITE",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 22,
+      "action": "Run instances",
+      "iam_action": "ec2:RunInstances",
+      "category": "WRITE",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 23,
+      "action": "Create snapshot",
+      "iam_action": "ec2:CreateSnapshot",
+      "category": "WRITE",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 24,
+      "action": "Authorize security group ingress",
+      "iam_action": "ec2:AuthorizeSecurityGroupIngress",
+      "category": "WRITE",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 25,
+      "action": "Stop instances",
+      "iam_action": "ec2:StopInstances",
+      "category": "DESTROY",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 26,
+      "action": "Terminate instances",
+      "iam_action": "ec2:TerminateInstances",
+      "category": "DESTROY",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 27,
+      "action": "Delete snapshot",
+      "iam_action": "ec2:DeleteSnapshot",
+      "category": "DESTROY",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 28,
+      "action": "Delete security group",
+      "iam_action": "ec2:DeleteSecurityGroup",
+      "category": "DESTROY",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 29,
+      "action": "List users",
+      "iam_action": "iam:ListUsers",
+      "category": "READ",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 30,
+      "action": "List roles",
+      "iam_action": "iam:ListRoles",
+      "category": "READ",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 31,
+      "action": "List policies",
+      "iam_action": "iam:ListPolicies",
+      "category": "READ",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 32,
+      "action": "Get role",
+      "iam_action": "iam:GetRole",
+      "category": "READ",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 33,
+      "action": "Get policy",
+      "iam_action": "iam:GetPolicy",
+      "category": "READ",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 34,
+      "action": "Get account authorization details",
+      "iam_action": "iam:GetAccountAuthorizationDetails",
+      "category": "READ",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 35,
+      "action": "Create user",
+      "iam_action": "iam:CreateUser",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 36,
+      "action": "Create role",
+      "iam_action": "iam:CreateRole",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 37,
+      "action": "Create access key",
+      "iam_action": "iam:CreateAccessKey",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 38,
+      "action": "Attach user policy",
+      "iam_action": "iam:AttachUserPolicy",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 39,
+      "action": "Attach role policy",
+      "iam_action": "iam:AttachRolePolicy",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 40,
+      "action": "Put user policy",
+      "iam_action": "iam:PutUserPolicy",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 41,
+      "action": "Put role policy",
+      "iam_action": "iam:PutRolePolicy",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 42,
+      "action": "Update assume role policy",
+      "iam_action": "iam:UpdateAssumeRolePolicy",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 43,
+      "action": "Create policy version",
+      "iam_action": "iam:CreatePolicyVersion",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 44,
+      "action": "Pass role",
+      "iam_action": "iam:PassRole",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 45,
+      "action": "Delete user",
+      "iam_action": "iam:DeleteUser",
+      "category": "DESTROY",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 46,
+      "action": "Delete role",
+      "iam_action": "iam:DeleteRole",
+      "category": "DESTROY",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 47,
+      "action": "Get caller identity",
+      "iam_action": "sts:GetCallerIdentity",
+      "category": "READ",
+      "service": "STS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 48,
+      "action": "Get session token",
+      "iam_action": "sts:GetSessionToken",
+      "category": "READ",
+      "service": "STS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 49,
+      "action": "Assume role",
+      "iam_action": "sts:AssumeRole",
+      "category": "ESCALATE",
+      "service": "STS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 50,
+      "action": "List functions",
+      "iam_action": "lambda:ListFunctions",
+      "category": "READ",
+      "service": "Lambda",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 51,
+      "action": "Get function",
+      "iam_action": "lambda:GetFunction",
+      "category": "READ",
+      "service": "Lambda",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 52,
+      "action": "Get policy",
+      "iam_action": "lambda:GetPolicy",
+      "category": "READ",
+      "service": "Lambda",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 53,
+      "action": "Invoke function",
+      "iam_action": "lambda:InvokeFunction",
+      "category": "WRITE",
+      "service": "Lambda",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 54,
+      "action": "Create function",
+      "iam_action": "lambda:CreateFunction",
+      "category": "WRITE",
+      "service": "Lambda",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 55,
+      "action": "Update function code",
+      "iam_action": "lambda:UpdateFunctionCode",
+      "category": "WRITE",
+      "service": "Lambda",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 56,
+      "action": "Update function configuration",
+      "iam_action": "lambda:UpdateFunctionConfiguration",
+      "category": "WRITE",
+      "service": "Lambda",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 57,
+      "action": "Add permission",
+      "iam_action": "lambda:AddPermission",
+      "category": "ESCALATE",
+      "service": "Lambda",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 58,
+      "action": "Create event source mapping",
+      "iam_action": "lambda:CreateEventSourceMapping",
+      "category": "WRITE",
+      "service": "Lambda",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 59,
+      "action": "Delete function",
+      "iam_action": "lambda:DeleteFunction",
+      "category": "DESTROY",
+      "service": "Lambda",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 60,
+      "action": "List tables",
+      "iam_action": "dynamodb:ListTables",
+      "category": "READ",
+      "service": "DynamoDB",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 61,
+      "action": "Describe table",
+      "iam_action": "dynamodb:DescribeTable",
+      "category": "READ",
+      "service": "DynamoDB",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 62,
+      "action": "Get item",
+      "iam_action": "dynamodb:GetItem",
+      "category": "READ",
+      "service": "DynamoDB",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 63,
+      "action": "Query",
+      "iam_action": "dynamodb:Query",
+      "category": "READ",
+      "service": "DynamoDB",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 64,
+      "action": "Put item",
+      "iam_action": "dynamodb:PutItem",
+      "category": "WRITE",
+      "service": "DynamoDB",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 65,
+      "action": "Update item",
+      "iam_action": "dynamodb:UpdateItem",
+      "category": "WRITE",
+      "service": "DynamoDB",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 66,
+      "action": "Delete item",
+      "iam_action": "dynamodb:DeleteItem",
+      "category": "DESTROY",
+      "service": "DynamoDB",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 67,
+      "action": "Delete table",
+      "iam_action": "dynamodb:DeleteTable",
+      "category": "DESTROY",
+      "service": "DynamoDB",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 68,
+      "action": "List keys",
+      "iam_action": "kms:ListKeys",
+      "category": "READ",
+      "service": "KMS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 69,
+      "action": "Describe key",
+      "iam_action": "kms:DescribeKey",
+      "category": "READ",
+      "service": "KMS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 70,
+      "action": "Get key policy",
+      "iam_action": "kms:GetKeyPolicy",
+      "category": "READ",
+      "service": "KMS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 71,
+      "action": "Decrypt",
+      "iam_action": "kms:Decrypt",
+      "category": "READ",
+      "service": "KMS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 72,
+      "action": "Encrypt",
+      "iam_action": "kms:Encrypt",
+      "category": "WRITE",
+      "service": "KMS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 73,
+      "action": "Put key policy",
+      "iam_action": "kms:PutKeyPolicy",
+      "category": "ESCALATE",
+      "service": "KMS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 74,
+      "action": "Schedule key deletion",
+      "iam_action": "kms:ScheduleKeyDeletion",
+      "category": "DESTROY",
+      "service": "KMS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 75,
+      "action": "Describe trails",
+      "iam_action": "cloudtrail:DescribeTrails",
+      "category": "READ",
+      "service": "CloudTrail",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 76,
+      "action": "Get trail status",
+      "iam_action": "cloudtrail:GetTrailStatus",
+      "category": "READ",
+      "service": "CloudTrail",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 77,
+      "action": "Lookup events",
+      "iam_action": "cloudtrail:LookupEvents",
+      "category": "READ",
+      "service": "CloudTrail",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 78,
+      "action": "Update trail",
+      "iam_action": "cloudtrail:UpdateTrail",
+      "category": "WRITE",
+      "service": "CloudTrail",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 79,
+      "action": "Stop logging",
+      "iam_action": "cloudtrail:StopLogging",
+      "category": "DESTROY",
+      "service": "CloudTrail",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 80,
+      "action": "Delete trail",
+      "iam_action": "cloudtrail:DeleteTrail",
+      "category": "DESTROY",
+      "service": "CloudTrail",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 81,
+      "action": "Describe log groups",
+      "iam_action": "logs:DescribeLogGroups",
+      "category": "READ",
+      "service": "CloudWatch Logs",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 82,
+      "action": "Get log events",
+      "iam_action": "logs:GetLogEvents",
+      "category": "READ",
+      "service": "CloudWatch Logs",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 83,
+      "action": "Create log group",
+      "iam_action": "logs:CreateLogGroup",
+      "category": "WRITE",
+      "service": "CloudWatch Logs",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 84,
+      "action": "Put log events",
+      "iam_action": "logs:PutLogEvents",
+      "category": "WRITE",
+      "service": "CloudWatch Logs",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 85,
+      "action": "Delete log group",
+      "iam_action": "logs:DeleteLogGroup",
+      "category": "DESTROY",
+      "service": "CloudWatch Logs",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 86,
+      "action": "List secrets",
+      "iam_action": "secretsmanager:ListSecrets",
+      "category": "READ",
+      "service": "Secrets Manager",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 87,
+      "action": "Describe secret",
+      "iam_action": "secretsmanager:DescribeSecret",
+      "category": "READ",
+      "service": "Secrets Manager",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 88,
+      "action": "Get secret value",
+      "iam_action": "secretsmanager:GetSecretValue",
+      "category": "READ",
+      "service": "Secrets Manager",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 89,
+      "action": "Create secret",
+      "iam_action": "secretsmanager:CreateSecret",
+      "category": "WRITE",
+      "service": "Secrets Manager",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 90,
+      "action": "Put secret value",
+      "iam_action": "secretsmanager:PutSecretValue",
+      "category": "WRITE",
+      "service": "Secrets Manager",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 91,
+      "action": "Delete secret",
+      "iam_action": "secretsmanager:DeleteSecret",
+      "category": "DESTROY",
+      "service": "Secrets Manager",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 92,
+      "action": "Describe parameters",
+      "iam_action": "ssm:DescribeParameters",
+      "category": "READ",
+      "service": "SSM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 93,
+      "action": "Get parameter",
+      "iam_action": "ssm:GetParameter",
+      "category": "READ",
+      "service": "SSM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 94,
+      "action": "Put parameter",
+      "iam_action": "ssm:PutParameter",
+      "category": "WRITE",
+      "service": "SSM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 95,
+      "action": "Delete parameter",
+      "iam_action": "ssm:DeleteParameter",
+      "category": "DESTROY",
+      "service": "SSM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 96,
+      "action": "Describe d b instances",
+      "iam_action": "rds:DescribeDBInstances",
+      "category": "READ",
+      "service": "RDS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 97,
+      "action": "Create d b snapshot",
+      "iam_action": "rds:CreateDBSnapshot",
+      "category": "WRITE",
+      "service": "RDS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 98,
+      "action": "Modify d b instance",
+      "iam_action": "rds:ModifyDBInstance",
+      "category": "WRITE",
+      "service": "RDS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 99,
+      "action": "Stop d b instance",
+      "iam_action": "rds:StopDBInstance",
+      "category": "DESTROY",
+      "service": "RDS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_a",
+      "n": 100,
+      "action": "Delete d b instance",
+      "iam_action": "rds:DeleteDBInstance",
+      "category": "DESTROY",
+      "service": "RDS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 1,
+      "action": "List all my buckets",
+      "iam_action": "s3:ListAllMyBuckets",
+      "category": "READ",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 2,
+      "action": "List bucket",
+      "iam_action": "s3:ListBucket",
+      "category": "READ",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 3,
+      "action": "Get object",
+      "iam_action": "s3:GetObject",
+      "category": "READ",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 4,
+      "action": "Get object version",
+      "iam_action": "s3:GetObjectVersion",
+      "category": "READ",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 5,
+      "action": "Get bucket acl",
+      "iam_action": "s3:GetBucketAcl",
+      "category": "READ",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 6,
+      "action": "Get bucket policy",
+      "iam_action": "s3:GetBucketPolicy",
+      "category": "READ",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 7,
+      "action": "Put object",
+      "iam_action": "s3:PutObject",
+      "category": "WRITE",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 8,
+      "action": "Copy object",
+      "iam_action": "s3:CopyObject",
+      "category": "WRITE",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 9,
+      "action": "Create bucket",
+      "iam_action": "s3:CreateBucket",
+      "category": "WRITE",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 10,
+      "action": "Put bucket acl",
+      "iam_action": "s3:PutBucketAcl",
+      "category": "WRITE",
+      "service": "S3",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 11,
+      "action": "Put bucket policy",
+      "iam_action": "s3:PutBucketPolicy",
+      "category": "WRITE",
+      "service": "S3",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 12,
+      "action": "Delete object",
+      "iam_action": "s3:DeleteObject",
+      "category": "DESTROY",
+      "service": "S3",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 13,
+      "action": "Delete bucket",
+      "iam_action": "s3:DeleteBucket",
+      "category": "DESTROY",
+      "service": "S3",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 14,
+      "action": "Delete bucket policy",
+      "iam_action": "s3:DeleteBucketPolicy",
+      "category": "DESTROY",
+      "service": "S3",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 15,
+      "action": "Describe instances",
+      "iam_action": "ec2:DescribeInstances",
+      "category": "READ",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 16,
+      "action": "Describe security groups",
+      "iam_action": "ec2:DescribeSecurityGroups",
+      "category": "READ",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 17,
+      "action": "Describe volumes",
+      "iam_action": "ec2:DescribeVolumes",
+      "category": "READ",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 18,
+      "action": "Describe snapshots",
+      "iam_action": "ec2:DescribeSnapshots",
+      "category": "READ",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 19,
+      "action": "Describe vpcs",
+      "iam_action": "ec2:DescribeVpcs",
+      "category": "READ",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 20,
+      "action": "Create tags",
+      "iam_action": "ec2:CreateTags",
+      "category": "WRITE",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 21,
+      "action": "Start instances",
+      "iam_action": "ec2:StartInstances",
+      "category": "WRITE",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 22,
+      "action": "Run instances",
+      "iam_action": "ec2:RunInstances",
+      "category": "WRITE",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 23,
+      "action": "Create snapshot",
+      "iam_action": "ec2:CreateSnapshot",
+      "category": "WRITE",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 24,
+      "action": "Authorize security group ingress",
+      "iam_action": "ec2:AuthorizeSecurityGroupIngress",
+      "category": "WRITE",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 25,
+      "action": "Stop instances",
+      "iam_action": "ec2:StopInstances",
+      "category": "DESTROY",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 26,
+      "action": "Terminate instances",
+      "iam_action": "ec2:TerminateInstances",
+      "category": "DESTROY",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 27,
+      "action": "Delete snapshot",
+      "iam_action": "ec2:DeleteSnapshot",
+      "category": "DESTROY",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 28,
+      "action": "Delete security group",
+      "iam_action": "ec2:DeleteSecurityGroup",
+      "category": "DESTROY",
+      "service": "EC2",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 29,
+      "action": "List users",
+      "iam_action": "iam:ListUsers",
+      "category": "READ",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 30,
+      "action": "List roles",
+      "iam_action": "iam:ListRoles",
+      "category": "READ",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 31,
+      "action": "List policies",
+      "iam_action": "iam:ListPolicies",
+      "category": "READ",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 32,
+      "action": "Get role",
+      "iam_action": "iam:GetRole",
+      "category": "READ",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 33,
+      "action": "Get policy",
+      "iam_action": "iam:GetPolicy",
+      "category": "READ",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 34,
+      "action": "Get account authorization details",
+      "iam_action": "iam:GetAccountAuthorizationDetails",
+      "category": "READ",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 35,
+      "action": "Create user",
+      "iam_action": "iam:CreateUser",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 36,
+      "action": "Create role",
+      "iam_action": "iam:CreateRole",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 37,
+      "action": "Create access key",
+      "iam_action": "iam:CreateAccessKey",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 38,
+      "action": "Attach user policy",
+      "iam_action": "iam:AttachUserPolicy",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 39,
+      "action": "Attach role policy",
+      "iam_action": "iam:AttachRolePolicy",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 40,
+      "action": "Put user policy",
+      "iam_action": "iam:PutUserPolicy",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 41,
+      "action": "Put role policy",
+      "iam_action": "iam:PutRolePolicy",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 42,
+      "action": "Update assume role policy",
+      "iam_action": "iam:UpdateAssumeRolePolicy",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 43,
+      "action": "Create policy version",
+      "iam_action": "iam:CreatePolicyVersion",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 44,
+      "action": "Pass role",
+      "iam_action": "iam:PassRole",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 45,
+      "action": "Delete user",
+      "iam_action": "iam:DeleteUser",
+      "category": "DESTROY",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 46,
+      "action": "Delete role",
+      "iam_action": "iam:DeleteRole",
+      "category": "DESTROY",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 47,
+      "action": "Get caller identity",
+      "iam_action": "sts:GetCallerIdentity",
+      "category": "READ",
+      "service": "STS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 48,
+      "action": "Get session token",
+      "iam_action": "sts:GetSessionToken",
+      "category": "READ",
+      "service": "STS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 49,
+      "action": "Assume role",
+      "iam_action": "sts:AssumeRole",
+      "category": "ESCALATE",
+      "service": "STS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 50,
+      "action": "List functions",
+      "iam_action": "lambda:ListFunctions",
+      "category": "READ",
+      "service": "Lambda",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 51,
+      "action": "Get function",
+      "iam_action": "lambda:GetFunction",
+      "category": "READ",
+      "service": "Lambda",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 52,
+      "action": "Get policy",
+      "iam_action": "lambda:GetPolicy",
+      "category": "READ",
+      "service": "Lambda",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 53,
+      "action": "Invoke function",
+      "iam_action": "lambda:InvokeFunction",
+      "category": "WRITE",
+      "service": "Lambda",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 54,
+      "action": "Create function",
+      "iam_action": "lambda:CreateFunction",
+      "category": "WRITE",
+      "service": "Lambda",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 55,
+      "action": "Update function code",
+      "iam_action": "lambda:UpdateFunctionCode",
+      "category": "WRITE",
+      "service": "Lambda",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 56,
+      "action": "Update function configuration",
+      "iam_action": "lambda:UpdateFunctionConfiguration",
+      "category": "WRITE",
+      "service": "Lambda",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 57,
+      "action": "Add permission",
+      "iam_action": "lambda:AddPermission",
+      "category": "ESCALATE",
+      "service": "Lambda",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 58,
+      "action": "Create event source mapping",
+      "iam_action": "lambda:CreateEventSourceMapping",
+      "category": "WRITE",
+      "service": "Lambda",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 59,
+      "action": "Delete function",
+      "iam_action": "lambda:DeleteFunction",
+      "category": "DESTROY",
+      "service": "Lambda",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 60,
+      "action": "List tables",
+      "iam_action": "dynamodb:ListTables",
+      "category": "READ",
+      "service": "DynamoDB",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 61,
+      "action": "Describe table",
+      "iam_action": "dynamodb:DescribeTable",
+      "category": "READ",
+      "service": "DynamoDB",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 62,
+      "action": "Get item",
+      "iam_action": "dynamodb:GetItem",
+      "category": "READ",
+      "service": "DynamoDB",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 63,
+      "action": "Query",
+      "iam_action": "dynamodb:Query",
+      "category": "READ",
+      "service": "DynamoDB",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 64,
+      "action": "Put item",
+      "iam_action": "dynamodb:PutItem",
+      "category": "WRITE",
+      "service": "DynamoDB",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 65,
+      "action": "Update item",
+      "iam_action": "dynamodb:UpdateItem",
+      "category": "WRITE",
+      "service": "DynamoDB",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 66,
+      "action": "Delete item",
+      "iam_action": "dynamodb:DeleteItem",
+      "category": "DESTROY",
+      "service": "DynamoDB",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 67,
+      "action": "Delete table",
+      "iam_action": "dynamodb:DeleteTable",
+      "category": "DESTROY",
+      "service": "DynamoDB",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 68,
+      "action": "List keys",
+      "iam_action": "kms:ListKeys",
+      "category": "READ",
+      "service": "KMS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 69,
+      "action": "Describe key",
+      "iam_action": "kms:DescribeKey",
+      "category": "READ",
+      "service": "KMS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 70,
+      "action": "Get key policy",
+      "iam_action": "kms:GetKeyPolicy",
+      "category": "READ",
+      "service": "KMS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 71,
+      "action": "Decrypt",
+      "iam_action": "kms:Decrypt",
+      "category": "READ",
+      "service": "KMS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 72,
+      "action": "Encrypt",
+      "iam_action": "kms:Encrypt",
+      "category": "WRITE",
+      "service": "KMS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 73,
+      "action": "Put key policy",
+      "iam_action": "kms:PutKeyPolicy",
+      "category": "ESCALATE",
+      "service": "KMS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 74,
+      "action": "Schedule key deletion",
+      "iam_action": "kms:ScheduleKeyDeletion",
+      "category": "DESTROY",
+      "service": "KMS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 75,
+      "action": "Describe trails",
+      "iam_action": "cloudtrail:DescribeTrails",
+      "category": "READ",
+      "service": "CloudTrail",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 76,
+      "action": "Get trail status",
+      "iam_action": "cloudtrail:GetTrailStatus",
+      "category": "READ",
+      "service": "CloudTrail",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 77,
+      "action": "Lookup events",
+      "iam_action": "cloudtrail:LookupEvents",
+      "category": "READ",
+      "service": "CloudTrail",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 78,
+      "action": "Update trail",
+      "iam_action": "cloudtrail:UpdateTrail",
+      "category": "WRITE",
+      "service": "CloudTrail",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 79,
+      "action": "Stop logging",
+      "iam_action": "cloudtrail:StopLogging",
+      "category": "DESTROY",
+      "service": "CloudTrail",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 80,
+      "action": "Delete trail",
+      "iam_action": "cloudtrail:DeleteTrail",
+      "category": "DESTROY",
+      "service": "CloudTrail",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 81,
+      "action": "Describe log groups",
+      "iam_action": "logs:DescribeLogGroups",
+      "category": "READ",
+      "service": "CloudWatch Logs",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 82,
+      "action": "Get log events",
+      "iam_action": "logs:GetLogEvents",
+      "category": "READ",
+      "service": "CloudWatch Logs",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 83,
+      "action": "Create log group",
+      "iam_action": "logs:CreateLogGroup",
+      "category": "WRITE",
+      "service": "CloudWatch Logs",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 84,
+      "action": "Put log events",
+      "iam_action": "logs:PutLogEvents",
+      "category": "WRITE",
+      "service": "CloudWatch Logs",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 85,
+      "action": "Delete log group",
+      "iam_action": "logs:DeleteLogGroup",
+      "category": "DESTROY",
+      "service": "CloudWatch Logs",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 86,
+      "action": "List secrets",
+      "iam_action": "secretsmanager:ListSecrets",
+      "category": "READ",
+      "service": "Secrets Manager",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 87,
+      "action": "Describe secret",
+      "iam_action": "secretsmanager:DescribeSecret",
+      "category": "READ",
+      "service": "Secrets Manager",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 88,
+      "action": "Get secret value",
+      "iam_action": "secretsmanager:GetSecretValue",
+      "category": "READ",
+      "service": "Secrets Manager",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 89,
+      "action": "Create secret",
+      "iam_action": "secretsmanager:CreateSecret",
+      "category": "WRITE",
+      "service": "Secrets Manager",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 90,
+      "action": "Put secret value",
+      "iam_action": "secretsmanager:PutSecretValue",
+      "category": "WRITE",
+      "service": "Secrets Manager",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 91,
+      "action": "Delete secret",
+      "iam_action": "secretsmanager:DeleteSecret",
+      "category": "DESTROY",
+      "service": "Secrets Manager",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 92,
+      "action": "Describe parameters",
+      "iam_action": "ssm:DescribeParameters",
+      "category": "READ",
+      "service": "SSM",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 93,
+      "action": "Get parameter",
+      "iam_action": "ssm:GetParameter",
+      "category": "READ",
+      "service": "SSM",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 94,
+      "action": "Put parameter",
+      "iam_action": "ssm:PutParameter",
+      "category": "WRITE",
+      "service": "SSM",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 95,
+      "action": "Delete parameter",
+      "iam_action": "ssm:DeleteParameter",
+      "category": "DESTROY",
+      "service": "SSM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 96,
+      "action": "Describe d b instances",
+      "iam_action": "rds:DescribeDBInstances",
+      "category": "READ",
+      "service": "RDS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 97,
+      "action": "Create d b snapshot",
+      "iam_action": "rds:CreateDBSnapshot",
+      "category": "WRITE",
+      "service": "RDS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 98,
+      "action": "Modify d b instance",
+      "iam_action": "rds:ModifyDBInstance",
+      "category": "WRITE",
+      "service": "RDS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 99,
+      "action": "Stop d b instance",
+      "iam_action": "rds:StopDBInstance",
+      "category": "DESTROY",
+      "service": "RDS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_b",
+      "n": 100,
+      "action": "Delete d b instance",
+      "iam_action": "rds:DeleteDBInstance",
+      "category": "DESTROY",
+      "service": "RDS",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 1,
+      "action": "List all my buckets",
+      "iam_action": "s3:ListAllMyBuckets",
+      "category": "READ",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 2,
+      "action": "List bucket",
+      "iam_action": "s3:ListBucket",
+      "category": "READ",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 3,
+      "action": "Get object",
+      "iam_action": "s3:GetObject",
+      "category": "READ",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 4,
+      "action": "Get object version",
+      "iam_action": "s3:GetObjectVersion",
+      "category": "READ",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 5,
+      "action": "Get bucket acl",
+      "iam_action": "s3:GetBucketAcl",
+      "category": "READ",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 6,
+      "action": "Get bucket policy",
+      "iam_action": "s3:GetBucketPolicy",
+      "category": "READ",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 7,
+      "action": "Put object",
+      "iam_action": "s3:PutObject",
+      "category": "WRITE",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 8,
+      "action": "Copy object",
+      "iam_action": "s3:CopyObject",
+      "category": "WRITE",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 9,
+      "action": "Create bucket",
+      "iam_action": "s3:CreateBucket",
+      "category": "WRITE",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 10,
+      "action": "Put bucket acl",
+      "iam_action": "s3:PutBucketAcl",
+      "category": "WRITE",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 11,
+      "action": "Put bucket policy",
+      "iam_action": "s3:PutBucketPolicy",
+      "category": "WRITE",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 12,
+      "action": "Delete object",
+      "iam_action": "s3:DeleteObject",
+      "category": "DESTROY",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 13,
+      "action": "Delete bucket",
+      "iam_action": "s3:DeleteBucket",
+      "category": "DESTROY",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 14,
+      "action": "Delete bucket policy",
+      "iam_action": "s3:DeleteBucketPolicy",
+      "category": "DESTROY",
+      "service": "S3",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 15,
+      "action": "Describe instances",
+      "iam_action": "ec2:DescribeInstances",
+      "category": "READ",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 16,
+      "action": "Describe security groups",
+      "iam_action": "ec2:DescribeSecurityGroups",
+      "category": "READ",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 17,
+      "action": "Describe volumes",
+      "iam_action": "ec2:DescribeVolumes",
+      "category": "READ",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 18,
+      "action": "Describe snapshots",
+      "iam_action": "ec2:DescribeSnapshots",
+      "category": "READ",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 19,
+      "action": "Describe vpcs",
+      "iam_action": "ec2:DescribeVpcs",
+      "category": "READ",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 20,
+      "action": "Create tags",
+      "iam_action": "ec2:CreateTags",
+      "category": "WRITE",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 21,
+      "action": "Start instances",
+      "iam_action": "ec2:StartInstances",
+      "category": "WRITE",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 22,
+      "action": "Run instances",
+      "iam_action": "ec2:RunInstances",
+      "category": "WRITE",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 23,
+      "action": "Create snapshot",
+      "iam_action": "ec2:CreateSnapshot",
+      "category": "WRITE",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 24,
+      "action": "Authorize security group ingress",
+      "iam_action": "ec2:AuthorizeSecurityGroupIngress",
+      "category": "WRITE",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 25,
+      "action": "Stop instances",
+      "iam_action": "ec2:StopInstances",
+      "category": "DESTROY",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 26,
+      "action": "Terminate instances",
+      "iam_action": "ec2:TerminateInstances",
+      "category": "DESTROY",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 27,
+      "action": "Delete snapshot",
+      "iam_action": "ec2:DeleteSnapshot",
+      "category": "DESTROY",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 28,
+      "action": "Delete security group",
+      "iam_action": "ec2:DeleteSecurityGroup",
+      "category": "DESTROY",
+      "service": "EC2",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 29,
+      "action": "List users",
+      "iam_action": "iam:ListUsers",
+      "category": "READ",
+      "service": "IAM",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 30,
+      "action": "List roles",
+      "iam_action": "iam:ListRoles",
+      "category": "READ",
+      "service": "IAM",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 31,
+      "action": "List policies",
+      "iam_action": "iam:ListPolicies",
+      "category": "READ",
+      "service": "IAM",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 32,
+      "action": "Get role",
+      "iam_action": "iam:GetRole",
+      "category": "READ",
+      "service": "IAM",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 33,
+      "action": "Get policy",
+      "iam_action": "iam:GetPolicy",
+      "category": "READ",
+      "service": "IAM",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 34,
+      "action": "Get account authorization details",
+      "iam_action": "iam:GetAccountAuthorizationDetails",
+      "category": "READ",
+      "service": "IAM",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 35,
+      "action": "Create user",
+      "iam_action": "iam:CreateUser",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 36,
+      "action": "Create role",
+      "iam_action": "iam:CreateRole",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 37,
+      "action": "Create access key",
+      "iam_action": "iam:CreateAccessKey",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 38,
+      "action": "Attach user policy",
+      "iam_action": "iam:AttachUserPolicy",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 39,
+      "action": "Attach role policy",
+      "iam_action": "iam:AttachRolePolicy",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 40,
+      "action": "Put user policy",
+      "iam_action": "iam:PutUserPolicy",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 41,
+      "action": "Put role policy",
+      "iam_action": "iam:PutRolePolicy",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 42,
+      "action": "Update assume role policy",
+      "iam_action": "iam:UpdateAssumeRolePolicy",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 43,
+      "action": "Create policy version",
+      "iam_action": "iam:CreatePolicyVersion",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 44,
+      "action": "Pass role",
+      "iam_action": "iam:PassRole",
+      "category": "ESCALATE",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 45,
+      "action": "Delete user",
+      "iam_action": "iam:DeleteUser",
+      "category": "DESTROY",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 46,
+      "action": "Delete role",
+      "iam_action": "iam:DeleteRole",
+      "category": "DESTROY",
+      "service": "IAM",
+      "result": "DENIED",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 47,
+      "action": "Get caller identity",
+      "iam_action": "sts:GetCallerIdentity",
+      "category": "READ",
+      "service": "STS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 48,
+      "action": "Get session token",
+      "iam_action": "sts:GetSessionToken",
+      "category": "READ",
+      "service": "STS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 49,
+      "action": "Assume role",
+      "iam_action": "sts:AssumeRole",
+      "category": "ESCALATE",
+      "service": "STS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 50,
+      "action": "List functions",
+      "iam_action": "lambda:ListFunctions",
+      "category": "READ",
+      "service": "Lambda",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 51,
+      "action": "Get function",
+      "iam_action": "lambda:GetFunction",
+      "category": "READ",
+      "service": "Lambda",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 52,
+      "action": "Get policy",
+      "iam_action": "lambda:GetPolicy",
+      "category": "READ",
+      "service": "Lambda",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 53,
+      "action": "Invoke function",
+      "iam_action": "lambda:InvokeFunction",
+      "category": "WRITE",
+      "service": "Lambda",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 54,
+      "action": "Create function",
+      "iam_action": "lambda:CreateFunction",
+      "category": "WRITE",
+      "service": "Lambda",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 55,
+      "action": "Update function code",
+      "iam_action": "lambda:UpdateFunctionCode",
+      "category": "WRITE",
+      "service": "Lambda",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 56,
+      "action": "Update function configuration",
+      "iam_action": "lambda:UpdateFunctionConfiguration",
+      "category": "WRITE",
+      "service": "Lambda",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 57,
+      "action": "Add permission",
+      "iam_action": "lambda:AddPermission",
+      "category": "ESCALATE",
+      "service": "Lambda",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 58,
+      "action": "Create event source mapping",
+      "iam_action": "lambda:CreateEventSourceMapping",
+      "category": "WRITE",
+      "service": "Lambda",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 59,
+      "action": "Delete function",
+      "iam_action": "lambda:DeleteFunction",
+      "category": "DESTROY",
+      "service": "Lambda",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 60,
+      "action": "List tables",
+      "iam_action": "dynamodb:ListTables",
+      "category": "READ",
+      "service": "DynamoDB",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 61,
+      "action": "Describe table",
+      "iam_action": "dynamodb:DescribeTable",
+      "category": "READ",
+      "service": "DynamoDB",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 62,
+      "action": "Get item",
+      "iam_action": "dynamodb:GetItem",
+      "category": "READ",
+      "service": "DynamoDB",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 63,
+      "action": "Query",
+      "iam_action": "dynamodb:Query",
+      "category": "READ",
+      "service": "DynamoDB",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 64,
+      "action": "Put item",
+      "iam_action": "dynamodb:PutItem",
+      "category": "WRITE",
+      "service": "DynamoDB",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 65,
+      "action": "Update item",
+      "iam_action": "dynamodb:UpdateItem",
+      "category": "WRITE",
+      "service": "DynamoDB",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 66,
+      "action": "Delete item",
+      "iam_action": "dynamodb:DeleteItem",
+      "category": "DESTROY",
+      "service": "DynamoDB",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 67,
+      "action": "Delete table",
+      "iam_action": "dynamodb:DeleteTable",
+      "category": "DESTROY",
+      "service": "DynamoDB",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 68,
+      "action": "List keys",
+      "iam_action": "kms:ListKeys",
+      "category": "READ",
+      "service": "KMS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 69,
+      "action": "Describe key",
+      "iam_action": "kms:DescribeKey",
+      "category": "READ",
+      "service": "KMS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 70,
+      "action": "Get key policy",
+      "iam_action": "kms:GetKeyPolicy",
+      "category": "READ",
+      "service": "KMS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 71,
+      "action": "Decrypt",
+      "iam_action": "kms:Decrypt",
+      "category": "READ",
+      "service": "KMS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 72,
+      "action": "Encrypt",
+      "iam_action": "kms:Encrypt",
+      "category": "WRITE",
+      "service": "KMS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 73,
+      "action": "Put key policy",
+      "iam_action": "kms:PutKeyPolicy",
+      "category": "ESCALATE",
+      "service": "KMS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 74,
+      "action": "Schedule key deletion",
+      "iam_action": "kms:ScheduleKeyDeletion",
+      "category": "DESTROY",
+      "service": "KMS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 75,
+      "action": "Describe trails",
+      "iam_action": "cloudtrail:DescribeTrails",
+      "category": "READ",
+      "service": "CloudTrail",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 76,
+      "action": "Get trail status",
+      "iam_action": "cloudtrail:GetTrailStatus",
+      "category": "READ",
+      "service": "CloudTrail",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 77,
+      "action": "Lookup events",
+      "iam_action": "cloudtrail:LookupEvents",
+      "category": "READ",
+      "service": "CloudTrail",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 78,
+      "action": "Update trail",
+      "iam_action": "cloudtrail:UpdateTrail",
+      "category": "WRITE",
+      "service": "CloudTrail",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 79,
+      "action": "Stop logging",
+      "iam_action": "cloudtrail:StopLogging",
+      "category": "DESTROY",
+      "service": "CloudTrail",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 80,
+      "action": "Delete trail",
+      "iam_action": "cloudtrail:DeleteTrail",
+      "category": "DESTROY",
+      "service": "CloudTrail",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 81,
+      "action": "Describe log groups",
+      "iam_action": "logs:DescribeLogGroups",
+      "category": "READ",
+      "service": "CloudWatch Logs",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 82,
+      "action": "Get log events",
+      "iam_action": "logs:GetLogEvents",
+      "category": "READ",
+      "service": "CloudWatch Logs",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 83,
+      "action": "Create log group",
+      "iam_action": "logs:CreateLogGroup",
+      "category": "WRITE",
+      "service": "CloudWatch Logs",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 84,
+      "action": "Put log events",
+      "iam_action": "logs:PutLogEvents",
+      "category": "WRITE",
+      "service": "CloudWatch Logs",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 85,
+      "action": "Delete log group",
+      "iam_action": "logs:DeleteLogGroup",
+      "category": "DESTROY",
+      "service": "CloudWatch Logs",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 86,
+      "action": "List secrets",
+      "iam_action": "secretsmanager:ListSecrets",
+      "category": "READ",
+      "service": "Secrets Manager",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 87,
+      "action": "Describe secret",
+      "iam_action": "secretsmanager:DescribeSecret",
+      "category": "READ",
+      "service": "Secrets Manager",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 88,
+      "action": "Get secret value",
+      "iam_action": "secretsmanager:GetSecretValue",
+      "category": "READ",
+      "service": "Secrets Manager",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 89,
+      "action": "Create secret",
+      "iam_action": "secretsmanager:CreateSecret",
+      "category": "WRITE",
+      "service": "Secrets Manager",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 90,
+      "action": "Put secret value",
+      "iam_action": "secretsmanager:PutSecretValue",
+      "category": "WRITE",
+      "service": "Secrets Manager",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 91,
+      "action": "Delete secret",
+      "iam_action": "secretsmanager:DeleteSecret",
+      "category": "DESTROY",
+      "service": "Secrets Manager",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 92,
+      "action": "Describe parameters",
+      "iam_action": "ssm:DescribeParameters",
+      "category": "READ",
+      "service": "SSM",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 93,
+      "action": "Get parameter",
+      "iam_action": "ssm:GetParameter",
+      "category": "READ",
+      "service": "SSM",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 94,
+      "action": "Put parameter",
+      "iam_action": "ssm:PutParameter",
+      "category": "WRITE",
+      "service": "SSM",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 95,
+      "action": "Delete parameter",
+      "iam_action": "ssm:DeleteParameter",
+      "category": "DESTROY",
+      "service": "SSM",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 96,
+      "action": "Describe d b instances",
+      "iam_action": "rds:DescribeDBInstances",
+      "category": "READ",
+      "service": "RDS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 97,
+      "action": "Create d b snapshot",
+      "iam_action": "rds:CreateDBSnapshot",
+      "category": "WRITE",
+      "service": "RDS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 98,
+      "action": "Modify d b instance",
+      "iam_action": "rds:ModifyDBInstance",
+      "category": "WRITE",
+      "service": "RDS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 99,
+      "action": "Stop d b instance",
+      "iam_action": "rds:StopDBInstance",
+      "category": "DESTROY",
+      "service": "RDS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    },
+    {
+      "identity": "policy_c",
+      "n": 100,
+      "action": "Delete d b instance",
+      "iam_action": "rds:DeleteDBInstance",
+      "category": "DESTROY",
+      "service": "RDS",
+      "result": "SUCCESS",
+      "mode": "mock"
+    }
+  ]
+}

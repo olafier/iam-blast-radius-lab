@@ -1,0 +1,28 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadOneBucket",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListAllMyBuckets",
+        "s3:ListBucket",
+        "s3:GetObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::project-test-bucket",
+        "arn:aws:s3:::project-test-bucket/*"
+      ]
+    },
+    {
+      "Sid": "OwnIdentityAndLogs",
+      "Effect": "Allow",
+      "Action": [
+        "sts:GetCallerIdentity",
+        "logs:CreateLogGroup",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
