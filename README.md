@@ -95,7 +95,9 @@ The experiment measures **reachable actions within a fixed test set in a control
 
 ## Connection to the wider research
 
-This is the first phase of a roadmap that extends toward OIDC / CI-CD identities (as in the UNC6426 case study), CloudTrail-based detection, and AI-assisted log analysis. The controlled experiment isolates the IAM variable that determines impact *after* an identity is compromised.
+This experiment is the first hands-on phase of the broader research project **[AI-Enhanced Attacks on Cloud Infrastructure](https://github.com/olafier/ai-enhanced-attacks-cloud)**, which studies how AI accelerates the cloud attack chain (as in the UNC6426 case study). AI can speed up reconnaissance and shorten the time between attack steps — but once an attacker holds a cloud identity, the impact is bounded by that identity's IAM permissions. This lab isolates that variable and measures it.
+
+It is also the first step of a longer roadmap that extends toward OIDC / CI-CD identities, CloudTrail-based detection, and AI-assisted log analysis.
 
 ---
 
