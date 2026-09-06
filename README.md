@@ -1,122 +1,102 @@
-# IAM Blast-Radius Experiment — Runnable Kit
+# IAM Blast-Radius Experiment
 
-ชุดสคริปต์สำหรับตอบ Research Question:
-**"How does IAM permission scope affect the blast radius of a compromised cloud identity?"**
+**A controlled cloud-security experiment measuring how IAM permission scope changes the blast radius of a compromised AWS identity.**
 
-แนวคิด: สร้าง identity 3 ระดับ (Policy A/B/C) แล้วยิง **Fixed Action Set ชุดเดียวกัน 100 actions ครอบ 12 AWS services**
-กับทุก identity → บันทึก SUCCESS/DENIED → คำนวณ **ASR** และ **Impact-Weighted Blast Radius**
-→ ทำกราฟ/ตารางเปรียบเทียบ
+🔗 **[Live dashboard →](https://olafier.github.io/iam-blast-radius-lab/)**
 
-ตัวแปรเดียวที่เปลี่ยนคือ IAM permission scope (independent variable) ทุกอย่างอื่นคงที่
-
-**Live dashboard:** `docs/index.html` (เปิดในเบราว์เซอร์ หรือโฮสต์ฟรีด้วย GitHub Pages)
+Part of the research project *AI-Enhanced Attacks on Cloud Infrastructure*. AI can accelerate the early stages of an attack chain, but once an attacker holds a cloud identity, the damage is bounded by that identity's **IAM permissions** — not by the AI. This experiment isolates that single variable and measures its effect.
 
 ---
 
-## โครงสร้างไฟล์
+## Research question
 
+> **How does IAM permission scope affect the blast radius of a compromised cloud identity?**
+
+If an identity is already compromised, how much more can a broadly-permissioned identity reach, change, or destroy compared to a least-privilege one — measured quantitatively?
+
+## Method
+
+A controlled experiment with one independent variable. Three test identities are each subjected to the **same fixed set of 100 AWS actions** across **12 services** (S3, EC2, IAM, STS, Lambda, DynamoDB, KMS, CloudTrail, CloudWatch Logs, Secrets Manager, SSM, RDS). The only thing that changes between runs is the IAM policy attached to the identity.
+
+| | Independent variable | Dependent variable | Controlled |
+|---|---|---|---|
+| **What** | IAM permission scope | Blast radius | Fixed action set + conditions |
+| **Levels** | Policy A / B / C | ASR & Weighted BR | Identical for every run |
+
+**Policies**
+- **Policy A — Narrow (least privilege):** read one S3 bucket, write its own logs, know its own identity.
+- **Policy B — Moderate (operational):** broad read + operational writes across services; no delete, no IAM.
+- **Policy C — Broad (PowerUser-like):** full access to most services (`s3:*`, `ec2:*`, …) but IAM read-only.
+
+## Metrics
+
+AWS returns only raw Allow/Deny decisions — there is no built-in "blast radius" score. Both metrics below are defined by this project, with weights fixed **before** any run so they cannot be tuned to the result.
+
+**Action Success Rate** — every action counts equally:
 ```
-iam-blast-radius-lab/
-├── policies/
-│   ├── policy_a_narrow.json      # Least privilege: อ่าน S3 bucket เดียว + เขียน log ของตัวเอง
-│   ├── policy_b_moderate.json    # Read กว้าง + operational write หลาย service (ไม่มี delete/IAM)
-│   └── policy_c_broad.json       # PowerUser-like: s3:* ec2:* lambda:* ... + IAM read เท่านั้น
-├── action_set.py                 # นิยาม 100 actions + service + category + weight (กำหนดก่อนทดลอง)
-├── run_experiment.py             # ยิง action set กับทุก identity -> results_raw.json
-├── compute_metrics.py            # คำนวณ ASR + Weighted Blast Radius + กราฟ
-├── setup_lab.py                  # (ทางเลือก) สร้าง/ลบ IAM users + resource บน AWS sandbox
-├── docs/index.html               # Dashboard (GitHub Pages)
-└── results/                      # ผลลัพธ์ทั้งหมดออกที่นี่
+ASR = successful actions / total attempted × 100
 ```
 
----
+**Impact-Weighted Blast Radius** — actions weighted by severity (READ 1 · WRITE 2 · DESTROY 3 · ESCALATE 4):
+```
+WBR = Σ weight(successful) / Σ weight(all) × 100
+```
 
-## 2 โหมดการทำงาน
+## Results
 
-### โหมด MOCK — รันได้เลย ไม่ต้องมี AWS
-ใช้ evaluator ในเครื่องอ่าน policy JSON แล้วตัดสิน Allow/Deny ของแต่ละ action
-เหมาะกับการ **ทดสอบ pipeline การคำนวณ/กราฟให้เสร็จก่อน**
+![Blast radius by policy](results/blast_radius.png)
 
+| Identity | Actions allowed | ASR | Weighted BR |
+|----------|:---------------:|:---:|:-----------:|
+| Policy A — Narrow   | 6 / 100  | 6.0 %  | 3.9 %  |
+| Policy B — Moderate | 47 / 100 | 47.0 % | 30.2 % |
+| Policy C — Broad    | 88 / 100 | 88.0 % | 77.6 % |
+
+### Key finding
+
+Policy C reaches **88 %** of the action set — but its Weighted Blast Radius is only **77.6 %**. The 12 actions it *cannot* perform are exactly the high-weight **IAM identity-mutation** actions (`iam:CreateUser`, `iam:AttachUserPolicy`, `iam:PassRole`, …). In other words, **even a broad PowerUser identity cannot escalate its own privileges** — which is precisely why least privilege on IAM matters most. The weighted metric surfaces this; a raw action count would hide it.
+
+## How to run
+
+Everything is driven by the same three policy files, so mock and real modes agree.
+
+**Mock mode** — no AWS needed, evaluates the policy JSON locally:
 ```bash
 python3 run_experiment.py --mock
 python3 compute_metrics.py
 ```
 
-ผลตัวอย่าง (100 actions):
-
-| Identity | Success | ASR % | Weighted BR % |
-|----------|:------:|:-----:|:------:|
-| Policy A |   6    |  6.0  |  3.9   |
-| Policy B |  47    | 47.0  | 30.2   |
-| Policy C |  88    | 88.0  | 77.6   |
-
-> สังเกต: Policy C ทำได้ 88% แต่ WBR แค่ 77.6% เพราะ 12 อย่างที่ทำไม่ได้คือ IAM
-> identity-mutation ที่น้ำหนักสูงสุด (ESCALATE ×4) — PowerUser ที่กว้างมากก็ยังยกระดับสิทธิ์ตัวเองไม่ได้
-
-### โหมด SIMULATE — ใช้ IAM Policy Simulator จริงของ AWS (แนะนำสำหรับผลจริง)
-
-`--simulate` จะส่ง policy JSON ทั้ง 3 ไปให้ **AWS IAM Policy Simulator** (`iam:SimulateCustomPolicy`)
-ตัดสิน Allow/Deny ของทั้ง 100 actions ด้วย engine จริงของ AWS — แต่ **ไม่ต้องสร้าง S3/EC2/IAM
-resource เลย และไม่แก้ไขอะไรจริง** จึงฟรีและปลอดภัย เหมาะกับ action set ขนาด 100 ที่การยิง API จริงทีละตัวไม่คุ้ม
-
+**Simulate mode** — uses the real **AWS IAM Policy Simulator** (`iam:SimulateCustomPolicy`) to evaluate all 100 actions with AWS's own engine. No S3/EC2/IAM resources are created and nothing is changed, so it is free and safe:
 ```bash
-python3 -m pip install boto3
-# ตั้งค่า credential (sandbox) ที่มีสิทธิ์ iam:SimulateCustomPolicy
-aws configure    # หรือใช้ env vars
-
+pip install boto3
 python3 run_experiment.py --simulate --region us-east-1
 python3 compute_metrics.py
 ```
+A single self-contained version (`blast_radius_simulate.py`) is also included for running directly in **AWS CloudShell** — upload it and run, no local setup required.
 
-> โหมดนี้สะท้อนการตัดสินใจจริงของ IAM (รวม explicit Deny และ wildcard) มากกว่า mock
-> ที่ match action แบบง่าย ๆ อย่างเดียว
+## Repository layout
 
-`setup_lab.py` มีไว้เผื่อคุณอยากสร้าง IAM users/resource จริงเพื่อทดสอบ + เก็บ CloudTrail
-แต่สำหรับวัด blast radius ล้วน ๆ โหมด simulate ไม่จำเป็นต้องใช้
+```
+iam-blast-radius-lab/
+├── policies/            # Policy A / B / C as real IAM JSON
+├── action_set.py        # 100 actions + service + category + weight
+├── run_experiment.py    # mock / simulate runner → results_raw.json
+├── compute_metrics.py   # ASR + Weighted BR + chart
+├── setup_lab.py         # (optional) provision real IAM users/resources
+├── docs/                # live dashboard (GitHub Pages)
+└── results/             # metrics, per-action matrix, chart
+```
+
+The dashboard loads `results/results_raw.json`; drop in a real `results_raw.json` from a simulate run and it updates automatically.
+
+## Limitations
+
+The experiment measures **reachable actions within a fixed test set in a controlled lab** — not real-world business impact. The category weights are a proposed scoring scheme, not an AWS standard. Results should not be extrapolated to "double the permissions = double the damage."
+
+## Connection to the wider research
+
+This is the first phase of a roadmap that extends toward OIDC / CI-CD identities (as in the UNC6426 case study), CloudTrail-based detection, and AI-assisted log analysis. The controlled experiment isolates the IAM variable that determines impact *after* an identity is compromised.
 
 ---
 
-## Metric ที่ใช้
-
-**Metric A — Action Success Rate**
-```
-ASR = (Successful Actions / Total Attempted Actions) × 100
-```
-
-**Metric B — Impact-Weighted Blast Radius** (ถ่วงน้ำหนักตามความรุนแรง)
-```
-weights: READ=1, WRITE=2, DESTROY=3, ESCALATE=4
-WBR = Σ(weight ของ action ที่สำเร็จ) / Σ(weight ของ action ทั้งหมด) × 100
-```
-
-> **สำคัญ:** AWS ไม่มี metric สำเร็จรูปสำหรับ blast radius — AWS ให้แค่ผล Allow/Deny
-> ส่วน ASR/WBR และตัวเลขน้ำหนักเป็นสิ่งที่งานนี้นิยามเอง (กำหนดใน `action_set.py`
-> **ก่อน** เก็บผล) ต้องระบุใน limitations ว่าเป็น proposed scheme ไม่ใช่มาตรฐาน AWS
-
-**100 actions แบ่งเป็น:** READ 41 · WRITE 26 · DESTROY 20 · ESCALATE 13 (น้ำหนักรวม 205)
-
----
-
-## Output ที่ได้
-
-- `results/results_raw.json` — ผลดิบทุกแถว (identity × action) → dashboard อ่านไฟล์นี้
-- `results/metrics.csv` — สรุปต่อ identity (ASR, WBR, นับตาม category)
-- `results/results_detail.csv` — matrix SUCCESS/DENIED ราย action
-- `results/blast_radius.png` — กราฟเปรียบเทียบ
-
----
-
-## Dashboard (GitHub Pages)
-
-หน้า `docs/index.html` จะพยายามโหลด `results/results_raw.json` ก่อน ถ้าไม่เจอจึงใช้ข้อมูลที่ฝังไว้
-วิธีเผยแพร่: push ขึ้น GitHub → Settings → Pages → เลือก branch `main` โฟลเดอร์ `/docs`
-พอรัน simulate ได้ผลจริง แค่ก็อป `results/results_raw.json` ทับใน `docs/results/` แล้ว
-dashboard จะเปลี่ยนเป็นข้อมูลจริง และ badge จะขึ้นเป็น "AWS run" อัตโนมัติ
-
----
-
-## เชื่อมกับงานวิจัย
-
-AI-Enhanced attack (UNC6426) พา attacker ไปถึงจุดที่ได้ cloud identity มา — MVP นี้ isolate
-ตัวแปรถัดไปคือ **IAM permission scope** แล้ววัดว่า identity นั้นสร้างความเสียหายได้แค่ไหน (blast radius)
-โดยวัดเฉพาะ reachable actions ใน controlled environment — **ไม่** เคลมถึงความเสียหายทางธุรกิจจริง
+*Skills demonstrated: AWS IAM & least privilege, permission boundaries, blast-radius analysis, boto3 automation, controlled experiment design, data visualization.*
