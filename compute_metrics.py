@@ -13,7 +13,7 @@ from collections import defaultdict
 HERE = os.path.dirname(os.path.abspath(__file__))
 RES = os.path.join(HERE, "results")
 LABELS = ["A", "B", "C"]
-NAMES = {"A": "A narrow", "B": "B moderate", "C": "C broad"}
+NAMES = {"A": "A over-permissive", "B": "B moderate", "C": "C least privilege"}
 CATS = ["READ", "WRITE", "DESTROY", "ESCALATE"]
 
 
@@ -54,9 +54,9 @@ def main():
         print(f"{m['policy']:<8}{m['successful']:>5}{m['ASR_pct']:>8}{m['WBR_pct']:>8}   "
               + "  ".join(f"{m[c + '_ok']:>4}" for c in CATS))
 
-    # denied in C = what even a broad identity can't do
-    denied_c = [r["action"] for r in rows if r["policy_C"] != "allowed"]
-    print(f"\nPolicy C denied ({len(denied_c)}): {', '.join(denied_c)}")
+    # denied under A (over-permissive) = what even a broad identity can't do
+    denied_a = [r["action"] for r in rows if r["policy_A"] != "allowed"]
+    print(f"\nPolicy A (over-permissive) denied ({len(denied_a)}): {', '.join(denied_a)}")
 
     try:
         import matplotlib

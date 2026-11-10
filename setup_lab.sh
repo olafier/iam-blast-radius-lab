@@ -21,9 +21,9 @@ EOF
 
 for L in A B C; do
   case $L in
-    A) POL="$HERE/policies/policy_A_narrow.json";;
-    B) POL="$HERE/policies/policy_B_moderate.json";;
-    C) POL="$HERE/policies/policy_C_broad.json";;
+    A) POL="$HERE/policies/policy_A_broad.json";;    # over-permissive
+    B) POL="$HERE/policies/policy_B_moderate.json";; # moderate
+    C) POL="$HERE/policies/policy_C_narrow.json";;   # least privilege
   esac
   ROLE="${PREFIX}-role-${L}"
   echo "== role $ROLE =="

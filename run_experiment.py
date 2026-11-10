@@ -16,10 +16,11 @@ from datetime import datetime, timezone
 from action_set import ACTIONS, WEIGHTS, resource_arn, service_of
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+# Report convention: A = over-permissive, B = moderate, C = least privilege
 POLICIES = {
-    "A": "policies/policy_A_narrow.json",
+    "A": "policies/policy_A_broad.json",
     "B": "policies/policy_B_moderate.json",
-    "C": "policies/policy_C_broad.json",
+    "C": "policies/policy_C_narrow.json",
 }
 
 
